@@ -1,7 +1,6 @@
 ---
 title: 'Refresher: 第四課'
 date: 2015-05-15 09:08:37 -04:00
-permalink: refresher-lesson-4
 categories:
 tags:
 - Japanese

@@ -1,7 +1,6 @@
 ---
 title: 'Refresher: 第六課'
 date: 2015-05-19 10:55:47 -04:00
-permalink: refresher-lesson-6
 categories:
 tags:
 - Japanese

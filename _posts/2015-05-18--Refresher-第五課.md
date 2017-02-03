@@ -1,7 +1,6 @@
 ---
 title: 'Refresher: 第五課'
 date: 2015-05-18 09:24:56 -04:00
-permalink: refresher-lesson-5
 categories:
 tags:
 - Japanese

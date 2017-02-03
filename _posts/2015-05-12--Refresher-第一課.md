@@ -1,7 +1,6 @@
 ---
 title: 'Refresher: 第一課'
 date: 2015-05-12 09:57:38 -04:00
-permalink: refresher-lesson-1
 categories:
 tags:
 - Japanese

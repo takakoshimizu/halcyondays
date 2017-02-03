@@ -1,7 +1,6 @@
 ---
 title: 'Refresher: 第七課'
 date: 2015-05-20 10:29:34 -04:00
-permalink: refresher-lesson-7
 categories:
 tags:
 - Japanese

@@ -1,7 +1,6 @@
 ---
 title: 'Refresher: 第九課'
 date: 2015-05-22 09:03:17 -04:00
-permalink: refresher-lesson-9
 categories:
 tags:
 - Lesson 9

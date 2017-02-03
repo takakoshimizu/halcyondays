@@ -1,7 +1,6 @@
 ---
 title: 'Refresher: 第八課'
 date: 2015-05-21 10:43:50 -04:00
-permalink: refresher-lesson-8
 categories:
 tags:
 - Lesson 8

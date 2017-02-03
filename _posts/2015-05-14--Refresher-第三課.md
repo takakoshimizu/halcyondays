@@ -1,7 +1,6 @@
 ---
 title: 'Refresher: 第三課'
 date: 2015-05-14 07:53:38 -04:00
-permalink: refresher-lesson-3
 categories:
 tags:
 - Japanese
