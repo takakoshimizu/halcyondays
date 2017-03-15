@@ -1,5 +1,4 @@
-source 'https://rubygems.org'
-
-gem "jekyll"
-gem "jekyll-paginate"
-gem "pygments.rb"
+source "https://rubygems.org"
+gem 'rouge'
+gem 'jekyll'
+gem 'jekyll-paginate'
