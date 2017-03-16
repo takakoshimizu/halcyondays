@@ -8,6 +8,7 @@ tags:
 - Genki
 - Refresher
 id: 55
+layout: post
 updated: '2015-05-22 14:57:45'
 ---
 

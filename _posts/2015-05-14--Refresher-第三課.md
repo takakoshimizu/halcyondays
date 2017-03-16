@@ -8,6 +8,7 @@ tags:
 - Refresher
 - Lesson 3
 id: 48
+layout: post
 updated: '2015-05-14 15:16:55'
 ---
 
