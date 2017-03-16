@@ -70,3 +70,9 @@ sass:
   sass_dir: _sass
   style: :compressed
 gems: [jekyll-paginate]
+
+defaults:
+  scope:
+    path: ''
+  values:
+    layout: 'post'
