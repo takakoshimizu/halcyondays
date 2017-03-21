@@ -20,6 +20,10 @@ article {
 header {
   h1 {
     margin: 0;
+
+    @media (max-width: 600px) {
+      font-size: 2em;
+    }
   }
   .meta {
     color: rgba($text-color, .5);
@@ -69,6 +73,10 @@ header {
     border: 1px solid rgba(255, 255, 255, 0);
     text-align: center;
     width: 50%;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
   }
   a:hover {
     @extend a.button:hover;
