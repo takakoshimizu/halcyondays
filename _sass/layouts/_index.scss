@@ -24,6 +24,14 @@
     p a:hover {
       @extend %link-hover;
     }
+
+    @media (max-width: 600px) {
+      header {
+        h1 {
+          font-size: 1.5em;
+        }
+      }
+    }
   }
   .excerpt {
     margin-top: 1em;
@@ -40,3 +48,5 @@
   padding: $padding-small $padding-large 0 $padding-large;
   text-align: center;
 }
+
+

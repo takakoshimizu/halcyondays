@@ -14,7 +14,7 @@ theme_settings:
   header_text: ' '
   header_text_feature_image: img/header.jpg
   footer_text: >
-   Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+   Powered by <a href="http://jekyllrb.com">Jekyll</a> with slightly modified <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
 
   # Icons
   rss: false
@@ -24,7 +24,7 @@ theme_settings:
   dribbble:
   facebook:
   flickr:
-  github: "takakoshimizu"
+  github: takakoshimizu
   google_plus:
   instagram:
   linkedin:  # Full URL
@@ -34,14 +34,12 @@ theme_settings:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter: "chalcyondays"
+  twitter: chalcyondays
   wordpress:
   youtube:
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname: halcyondays
-  muut_community_name: # From muut.com settings, e.g. "muttcommunityname"
+  google_analytics: UA-105530375-1 # Tracking ID, e.g. "UA-000000-01"
   katex: true # Enable if using math markup
 
   # Localization strings
@@ -69,7 +67,8 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-gems: [jekyll-paginate]
+gems: 
+  - jekyll-paginate
 
 defaults:
   scope:

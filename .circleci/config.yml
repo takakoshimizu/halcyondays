@@ -1,0 +1,90 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: starefossen/ruby-node:2-8
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v2-dependencies-{{ checksum "Gemfile.lock" }}
+          - v2-dependencies-
+
+      - run: 
+          name: Jekyll Dependencies
+          command: bundle install
+
+      - run: 
+          name: Build Jekyll Site
+          command: JEKYLL_ENV=production bundle exec jekyll b
+
+      - save_cache:
+          paths:
+            - /usr/local/bundle
+            - /usr/local/lib/node_modules
+          key: v2-dependencies-{{ checksum "Gemfile.lock" }}
+
+      - store_artifacts:
+          path: ./_site
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - Gemfile
+            - Gemfile.lock
+            - database.rules.json
+            - firebase.json
+            - _site
+
+  test:
+    docker:
+      - image: starefossen/ruby-node:2-8
+
+    working_directory: ~/repo
+
+    steps:
+      - attach_workspace:
+         at: .
+
+      - restore_cache:
+          keys:
+          - v2-dependencies-{{ checksum "Gemfile.lock" }}
+          - v2-dependencies-
+
+      - run:
+          name: Test
+          command: bundle exec htmlproofer ./_site --check-html --disable-external --alt-ignore '/.*/'
+
+  deploy:
+    docker:
+      - image: devillex/docker-firebase
+
+    working_directory: ~/repo
+
+    steps:
+      - attach_workspace:
+         at: .
+
+      - run:
+          name: 'Deploy to firebase'
+          command: |
+            firebase deploy --project $FIREBASE_PROJECT --token=$FIREBASE_TOKEN
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
