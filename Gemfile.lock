@@ -3,9 +3,22 @@ GEM
   specs:
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
+    autoprefixer-rails (7.1.1)
+      execjs
+    bootstrap (4.0.0.beta)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (~> 1.11.1)
+      sass (>= 3.4.19)
     colorator (1.1.0)
+    concurrent-ruby (1.0.5)
+    execjs (2.7.0)
+    extras (0.3.0)
+      forwardable-extended (~> 2.5)
+    fastimage (2.1.0)
     ffi (1.9.17)
     forwardable-extended (2.6.0)
+    htmlbeautifier (1.3.1)
+    htmlcompressor (0.3.1)
     jekyll (3.3.1)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -17,9 +30,25 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
-    jekyll-paginate (1.1.0)
+    jekyll-assets (2.3.2)
+      concurrent-ruby (~> 1.0)
+      extras (~> 0.2)
+      fastimage (~> 2.0, >= 1.8)
+      jekyll (~> 3.1, >= 3.0)
+      pathutil (>= 0.8)
+      rack (~> 1.6)
+      sprockets (~> 3.3, < 3.8)
+    jekyll-last-modified-at (1.0.1)
+      jekyll (~> 3.3)
+      posix-spawn (~> 0.3.9)
+    jekyll-paginate-v2 (1.8.1)
+      jekyll (~> 3.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
+    jekyll-tidy (0.2.2)
+      htmlbeautifier
+      htmlcompressor
+      jekyll
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     kramdown (1.13.2)
@@ -28,23 +57,40 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
+    mini_magick (4.8.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
+    popper_js (1.11.1)
+    posix-spawn (0.3.13)
     public_suffix (2.0.5)
+    rack (1.6.8)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     rouge (1.11.1)
     safe_yaml (1.0.4)
-    sass (3.4.23)
+    sass (3.4.24)
+    sprockets (3.7.1)
+      concurrent-ruby (~> 1.0)
+      rack (> 1, < 3)
+    uglifier (3.2.0)
+      execjs (>= 0.3.0, < 3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails (= 7.1.1)
+  bootstrap (~> 4.0.0.beta)
   jekyll
-  jekyll-paginate
+  jekyll-assets
+  jekyll-last-modified-at
+  jekyll-paginate-v2
+  jekyll-tidy
+  mini_magick
   rouge
+  sass (= 3.4.24)
+  uglifier (= 3.2.0)
 
 BUNDLED WITH
-   1.13.7
+   1.14.6

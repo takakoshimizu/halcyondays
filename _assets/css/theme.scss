@@ -1,0 +1,31 @@
+@import 'bootstrap.custom';
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+
+body {
+  font-family: 'Bitter', serif;
+  color: $dark-text-color;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Palanquin', sans-serif;
+}
+
+.main-hero {
+  @include hero-base;
+  @include text-shadow;
+
+  padding: 4rem;
+
+  @include tablet {
+    padding: 3rem;
+  }
+
+  @include mobile {
+    padding: 2rem;
+  }
+  
+  background-color: $base-color; 
+  color: $light-text-color;
+}

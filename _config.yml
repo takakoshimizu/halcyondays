@@ -1,75 +1,35 @@
 # SITE CONFIGURATION
+title: Halcyon Days
+subtitle: Programming, anime, games.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://example.com" # the base hostname & protocol for your site
+url: "https://halcyond.net/" # the base hostname & protocol for your site
+encoding: utf-8
 
-# THEME-SPECIFIC CONFIGURATION
-theme_settings:
-  # Meta
-  title: Halcyon Days
-  avatar: avatar.png
-  gravatar: af68cef7190bf37412d3a1a63ca77cd3 # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
-
-  # Header and footer text
-  header_text: ' '
-  header_text_feature_image: img/header.jpg
-  footer_text: >
-   Powered by <a href="http://jekyllrb.com">Jekyll</a> with slightly modified <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
-
-  # Icons
-  rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
-  behance:
-  bitbucket:
-  dribbble:
-  facebook:
-  flickr:
-  github: "takakoshimizu"
-  google_plus:
-  instagram:
-  linkedin:  # Full URL
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:  # Full URL
-  steam:
-  tumblr:
-  twitter: "chalcyondays"
-  wordpress:
-  youtube:
-
-  # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname: halcyondays
-  muut_community_name: # From muut.com settings, e.g. "muttcommunityname"
-  katex: true # Enable if using math markup
-
-  # Localization strings
-  str_follow_on: "Follow on"
-  str_rss_follow: "Follow RSS feed"
-  str_email: "Email"
-  str_next: "Next"
-  str_prev: "Prev"
-  str_continue_reading: "Continue reading"
-
-  # Colours, typography and padding
-  # Open the "_sass > base" folder, and open "_variables.scss"
-  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
-
-  # Post navigation
-  post_navigation: true
+social:
+  github: takakoshimizu
 
 # PAGINATION
-paginate: 5
-paginate_path: "blog/page:num"
+pagination:
+  enabled: true
+  per_page: 5
+
+google:
+  analytics: UA-105530375-1
 
 # BUILD SETTINGS
 markdown: kramdown
 highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: :compressed
-gems: [jekyll-paginate]
+gems: 
+  - jekyll-assets
+  - jekyll-paginate-v2
+  - jekyll-last-modified-at
+
+assets:
+  digest: false
+  autoprefixer:
+    browsers: 
+      - last 2 versions
+      - '> 5%'
 
 defaults:
   scope:
