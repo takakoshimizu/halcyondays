@@ -11,6 +11,8 @@ I've been blogging via CMSes for years now, because what better way to write tha
 
 From Blogger to Wordpress to Tumblr to Ghost, I've been everywhere, and enjoyed those same features. But now, I've moved on to [Hexo](https://hexo.io).
 
+ > Note: This site now runs on Jekyll. Same general idea, different generator.
+
 So why would you ever give that up for a tool that requires building and deploying?
 
 ### Markdown
